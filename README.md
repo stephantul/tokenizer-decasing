@@ -28,7 +28,7 @@ If we had just lower-cased the token before sending it to the original tokenizer
 Not on pip yet:
 
 ```bash
-pip install git+https://github.com/stephantul/decasing.git
+pip install git+https://github.com/stephantul/tokenizer-decasing.git
 ```
 
 ## Motivation
