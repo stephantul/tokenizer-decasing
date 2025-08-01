@@ -38,8 +38,7 @@ Here's a couple of facts:
 1. Users don't tend to care much about case. Many users will type "apple" and expect to find the company "Apple". We model case consistently, but case is _used_ inconsistently.
 2. Setting aside affect (e.g., using upper-case to denote anger), casing is a marginal semantic phenomenon. There are very few cases in which cased tokens really change the meaning of a sentence.
 3. Cased tokens take up a lot of space. The ModernBERT tokenizer, for example consists of 25% cased tokens. This leads to weird segmentations: e.g., `"humph" -> ["hum", "ph]` but `"Humph" -> ["Humph"]`. Why is `Humph` a token?
-4. Uncased tokenizers tend to perform slightly better on benchmarks
-5. Decased tokenizers generate fewer tokens per sequence
+4. Decased tokenizers generate fewer tokens per sequence
 
 # Author
 
