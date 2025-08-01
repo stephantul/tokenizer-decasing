@@ -1,0 +1,27 @@
+{
+  "dataset_revision": "8ccc72e69e65f40c70e117d8b3c08306bb788b60",
+  "task_name": "MasakhaNEWSClusteringS2S",
+  "mteb_version": "1.38.38",
+  "scores": {
+    "test": [
+      {
+        "v_measure": 0.466,
+        "v_measure_std": 0.267639,
+        "v_measures": [
+          0.044025,
+          0.264893,
+          0.646432,
+          0.619795,
+          0.754855
+        ],
+        "main_score": 0.466,
+        "hf_subset": "eng",
+        "languages": [
+          "eng-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": 4.393562078475952,
+  "kg_co2_emissions": null
+}

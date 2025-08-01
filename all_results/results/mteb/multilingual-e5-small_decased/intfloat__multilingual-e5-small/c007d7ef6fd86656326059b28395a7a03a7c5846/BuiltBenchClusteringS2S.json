@@ -1,0 +1,40 @@
+{
+  "dataset_revision": "1aaeb2ece89ea0a8c64e215c95c4cfaf7e891149",
+  "task_name": "BuiltBenchClusteringS2S",
+  "mteb_version": "1.38.38",
+  "scores": {
+    "test": [
+      {
+        "v_measure": 0.34521,
+        "v_measure_std": 0.111008,
+        "v_measures": [
+          0.127683,
+          0.327823,
+          0.213992,
+          0.450197,
+          0.245677,
+          0.511161,
+          0.316005,
+          0.436974,
+          0.304418,
+          0.534665,
+          0.386426,
+          0.369828,
+          0.425271,
+          0.426326,
+          0.181395,
+          0.227057,
+          0.315244,
+          0.413645
+        ],
+        "main_score": 0.34521,
+        "hf_subset": "default",
+        "languages": [
+          "eng-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": 10.631749153137207,
+  "kg_co2_emissions": null
+}

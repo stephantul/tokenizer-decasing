@@ -6,15 +6,15 @@ from tokenizers.normalizers import Lowercase, Sequence
 from transformers import AutoTokenizer
 from transformers.tokenization_utils_fast import PreTrainedTokenizerFast
 
-from decasing.datamodels import TokenizerModel
+from decasing.datamodels import TokenizerModel, WordPieceModel
 
 
-def decase_tokenizer(tokenizer: PreTrainedTokenizerFast) -> PreTrainedTokenizerFast:
+def decase_tokenizer(tokenizer: PreTrainedTokenizerFast, make_greedy: bool = False) -> PreTrainedTokenizerFast:
     """Decase a tokenizer by removing the casing from the backend tokenizer."""
     backend_tokenizer = tokenizer.backend_tokenizer
     special_tokens = tokenizer.all_special_tokens
 
-    new_tokenizer = _decase_vocabulary(backend_tokenizer, special_tokens=special_tokens)
+    new_tokenizer = _decase_vocabulary(backend_tokenizer, special_tokens=special_tokens, make_greedy=make_greedy)
     new_tokenizer = _add_lowercase(new_tokenizer)
 
     with TemporaryDirectory() as tmpdir:
@@ -54,7 +54,7 @@ def _add_lowercase(tokenizer: Tokenizer) -> Tokenizer:
     return tokenizer
 
 
-def _decase_vocabulary(tokenizer: Tokenizer, special_tokens: list[str]) -> Tokenizer:
+def _decase_vocabulary(tokenizer: Tokenizer, special_tokens: list[str], make_greedy: bool) -> Tokenizer:
     """
     Replace the vocabulary in a tokenizer with a decased version.
 
@@ -63,9 +63,13 @@ def _decase_vocabulary(tokenizer: Tokenizer, special_tokens: list[str]) -> Token
 
     :param tokenizer: The tokenizer to modify.
     :param special_tokens: A list of special tokens that should not be lowercased.
+    :param make_greedy: If True, convert the tokenizer to a greedy model by converting it to a WordPiece model.
     :return: A new Tokenizer with the decased vocabulary.
     """
     tokenizer_model = TokenizerModel.from_tokenizer(tokenizer)
-    tokenizer_model.model.lowercase(special_tokens=special_tokens)
+    tokenizer_model.lowercase(special_tokens=special_tokens)
+
+    if make_greedy and not isinstance(tokenizer_model.model, WordPieceModel):
+        tokenizer_model.model = tokenizer_model.model.make_greedy()
 
     return Tokenizer.from_str(tokenizer_model.model_dump_json())
