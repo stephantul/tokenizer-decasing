@@ -1,0 +1,57 @@
+{
+  "dataset_revision": "7f3489153b8dad7336a54f63202deb1414c33309",
+  "task_name": "ClusTREC-Covid",
+  "mteb_version": "1.38.38",
+  "scores": {
+    "test": [
+      {
+        "v_measures": {
+          "Level 0": [
+            0.855649,
+            0.848611,
+            0.823731,
+            0.824426,
+            0.832525,
+            0.841604,
+            0.836085,
+            0.81999,
+            0.834184,
+            0.829565
+          ]
+        },
+        "v_measure": 0.834637,
+        "v_measure_std": 0.01075,
+        "main_score": 0.834637,
+        "hf_subset": "title and abstract",
+        "languages": [
+          "eng-Latn"
+        ]
+      },
+      {
+        "v_measures": {
+          "Level 0": [
+            0.824127,
+            0.835994,
+            0.833151,
+            0.83927,
+            0.817922,
+            0.81779,
+            0.819813,
+            0.84048,
+            0.81631,
+            0.822277
+          ]
+        },
+        "v_measure": 0.826714,
+        "v_measure_std": 0.009022,
+        "main_score": 0.826714,
+        "hf_subset": "title",
+        "languages": [
+          "eng-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": 10.205177068710327,
+  "kg_co2_emissions": null
+}

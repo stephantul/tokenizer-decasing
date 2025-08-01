@@ -24,6 +24,7 @@ dev = [
     "pytest-coverage",
     "ruff",
 ]
+experiments = ["sentence-transformers", "datasets", "mteb"]
 
 [tool.ruff]
 exclude = [".venv/"]

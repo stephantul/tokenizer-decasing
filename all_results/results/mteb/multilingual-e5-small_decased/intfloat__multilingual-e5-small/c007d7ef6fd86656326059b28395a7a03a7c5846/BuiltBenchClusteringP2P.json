@@ -1,0 +1,42 @@
+{
+  "dataset_revision": "919bb71053e9de62a68998161ce4f0cee8f786fb",
+  "task_name": "BuiltBenchClusteringP2P",
+  "mteb_version": "1.38.38",
+  "scores": {
+    "test": [
+      {
+        "v_measure": 0.450275,
+        "v_measure_std": 0.142303,
+        "v_measures": [
+          0.442828,
+          0.387688,
+          0.31986,
+          0.379165,
+          0.273076,
+          0.35695,
+          0.544738,
+          0.568343,
+          0.608997,
+          0.229411,
+          0.382894,
+          0.444133,
+          0.567621,
+          0.366534,
+          0.454134,
+          0.497658,
+          0.892554,
+          0.321801,
+          0.477718,
+          0.489402
+        ],
+        "main_score": 0.450275,
+        "hf_subset": "default",
+        "languages": [
+          "eng-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": 36.48550009727478,
+  "kg_co2_emissions": null
+}

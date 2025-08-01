@@ -1,0 +1,34 @@
+{
+  "dataset_revision": "a74d7350ea12af010cfb1c21e34f1f81fd2e615b",
+  "task_name": "SIB200ClusteringS2S",
+  "mteb_version": "1.38.38",
+  "scores": {
+    "test": [
+      {
+        "v_measures": {
+          "Level 0": [
+            0.375356,
+            0.350706,
+            0.413886,
+            0.347858,
+            0.395174,
+            0.347631,
+            0.313459,
+            0.406373,
+            0.338608,
+            0.343351
+          ]
+        },
+        "v_measure": 0.36324,
+        "v_measure_std": 0.031161,
+        "main_score": 0.36324,
+        "hf_subset": "eng_Latn",
+        "languages": [
+          "eng-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": 6.746212005615234,
+  "kg_co2_emissions": null
+}
